@@ -1,0 +1,35 @@
+.grid-container {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+h1 {
+    font: Georgia, serif;
+    font-size: 150px;
+    grid-column: 1/3;
+    grid-row: 1/2;
+    z-index: 1;
+    text-align:center;
+    letter-spacing: .1em;
+}
+h2 {
+    font: georgia, serif;
+    font-size: 6em;
+    color:#900603;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    text-align: center;
+    z-index:1;
+    letter-spacing: .1em;
+}
+.cherries {
+    size: 10px;
+    z-index: 0;
+    grid-row: 1/3;
+    grid-column:1/2;
+}
+#gray {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    background-color: gray;
+}
