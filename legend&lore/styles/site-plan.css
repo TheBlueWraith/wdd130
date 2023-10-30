@@ -137,12 +137,13 @@ nav a:hover {
   display: grid;
   justify-content: center;
 
-  grid-template-columns: repeat(6, 15%);
+  grid-template-columns: repeat(9, 11%);
+  column-gap: 2px;
   grid-template-rows: 3em 1.5em 1.5em 3em;
-  grid-template-areas: ". . home home . ."
-    ". . . top . ."
-    ". left left right right ."
-    "page2 page2 . . page3 page3";
+  grid-template-areas: ". . . . home . . . ."
+    ". . . . top . . . ."
+    ". one two three four five six seven ."
+    ". page1 page2 page3 page4 page5 page6 page7 .";
 }
 .sitemap > div {
 
@@ -154,30 +155,79 @@ nav a:hover {
   background-color: #ccc;
   line-height: 3em;
 }
-.sm-page2 {
+    .sm-page1 {
+  grid-area: page1;
+  background-color: #ccc;
+  line-height: 3em;
+    }
+    .sm-page2 {
   grid-area: page2;
   background-color: #ccc;
   line-height: 3em;
-}
-.sm-page3 {
-  grid-area: page3;
-  background-color: #ccc;
-  line-height: 3em;
-}
+    }
+    .sm-page3 {
+    grid-area: page3;
+    background-color: #ccc;
+    line-height: 3em;
+  }
+  .sm-page4 {
+    grid-area: page4;
+    background-color: #ccc;
+    line-height: 3em;
+  }
+  .sm-page5 {
+    grid-area: page5;
+    background-color: #ccc;
+    line-height: 3em;
+  }
+  .sm-page6 {
+    grid-area: page6;
+    background-color: #ccc;
+    line-height: 3em;
+  }
+  .sm-page7 {
+    grid-area: page7;
+    background-color: #ccc;
+    line-height: 3em;
+  }
 
 .top {
   grid-area: top;
   border-left: 1px solid;
 }
 
-.left {
-  grid-area: left;
+.one {
+  grid-area: one;
   border-top: 1px solid;
   border-left: 1px solid;
 }
+.two {
+    grid-area: two;
+    border-top: 1px solid;
+    border-left: 1px solid;
+  }
+.three {
+    grid-area: three;
+    border-top: 1px solid;
+    border-left: 1px solid;
+  }
+.four {
+    grid-area: four;
+    border-top: 1px solid;
+    border-left: 1px solid;
+  }
+.five {
+    grid-area: five;
+    border-top: 1px solid;
+    border-left: 1px solid;
+  }
+.six {
+    grid-area: six;
+    border-top: 1px solid;
+    border-left: 1px solid;
+  }
+.seven {
+  grid-area: seven;
 
-.right {
-  grid-area: right;
-  border-top: 1px solid;
-  border-right: 1px solid;
-}
+  border-left: 1px solid;
+    }
