@@ -200,6 +200,47 @@ footer a:hover {
 footer .social img {
     padding-top: 15px;
 }
+/*FAQ page starts here */
+
+#faq-heading {
+    font-size: 50;
+    color: #000137;
+    margin-bottom: 5px;
+}
+#faq-subheading {
+    color: #780000;
+    font-size: xx-large;
+    margin-bottom: 40px;
+}
+.collapsible {
+    background-color: #000137;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: larger;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    grid-column: 1/2;
+  }
+  .active, .collapsible:hover {
+    background-color: #8588ff;
+    color:#000137;
+  }
+  .faqcontent {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: white;
+    grid-column: 1/2;
+    border: 2px, #780000;
+    font-weight: bolder;
+    font-size: large;
+  }
+
 @media screen and (max-width: 900px) {
     #hero, .home-grid {
         display: block;
@@ -240,4 +281,6 @@ footer .social img {
     footer {
         margin-top: 25px;
     }
+
+
 }
