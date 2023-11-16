@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC');
+:root {
+--heading-font: "IM Fell French Canon SC";
+--paragraph-font: Tahoma, sans-serif;
+}
+#galaxy {
+    background-image: url("images\galaxy.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+#story {
+    background-color: black;
+    color: white;
+}
+#void {
+    background-color: black;
+    color: white;
+}
+#light {
+    background-color: white;
+    color: black;
+}
+.main_grid {
+    grid-template-columns: ;
+}
+h1 {
+    font-family: var(--heading-font);
+}
+p {
+    font-family: var(--paragraph-font);
+}
+button {
+    background-color: black;
+    border-radius: 50%;
+}
