@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Legend&Lore:Blue</title>
+    <link type="text/css" rel="stylesheet" href="styles/planets.css">
+</head>
+
+<body>
+    <div class="buttons">
+        <button type="button" class="collapsible"> Planet </button>
+        <div class="content">
+            <p></p>            
+        </div>
+        <button type="button" class="collapsible"> Deity </button>
+        <div class="content">
+            <p>text here</p>
+        </div>
+        <button type="button" class="collapsible"> Religion </button>
+        <div class="content">
+            <p>text here</p>
+        </div>
+        <button type="button" class="collapsible"> People </button>
+        <div class="content">
+            <p>text here</p>
+        </div>
+        <button type="button" class="collapsible"> Stories </button>
+        <div class="content">
+            <p>text here</p>
+        </div>
+    </div>
+<a href="index.html">Home</a>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+    var i;
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+</script>
+
+</body>
+</html>
