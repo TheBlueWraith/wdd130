@@ -1,13 +1,63 @@
-
 body {
-    color: aqua;
+    color: white;
+    display: grid;
+    grid-template-columns: 50px 1fr 1fr 1fr 50px;
+    grid-template-rows: 49% 49% 2%;
 }
 .content {
-    color: aqua;
+    color: white;
 }
 h2 {
-    color: aqua;
+    color: white;
 }
 p {
-    color:aqua
+    color: white;
+} 
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 20px;
+    width: 1000%;
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+    outline: none;
+    font-size: 30px;
+    font-family: "'Bradley Hand', cursive;";
+  }
+
+/* Style the collapsible content. Note: hidden by default */
+  .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #ACA9E4;
+  }
+
+#a {
+    grid-column: 2/3;
+    grid-row: 1/2
+}
+.b {
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+#c {
+    grid-column: 4/5;
+    grid-row: 1/2;
+}
+#d {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+.e {
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+#home_link {
+    grid-column: 1/2;
+    grid-row: 3/4;
 }
