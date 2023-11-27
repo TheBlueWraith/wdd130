@@ -4,29 +4,94 @@
     <meta charset="UTF-8">
     <title>Legend&Lore:Blue</title>
     <link type="text/css" rel="stylesheet" href="..\styles\planets.css">
-
-    
     <style>
         body {
             background-image: url("../images/galaxy_blue.png");
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
+             background-repeat: no-repeat;
+             background-attachment: fixed;
+             background-size: cover;
         }
-        .collapsible {
+        /* Style the tab */
+         .tab {
+            overflow: hidden;
+            border: 1px solid #180066;
             background-color: #180066;
-        }
-        .active, .collapsible:hover {
-        background-color: #7950ff;
-        color:#180066;
-        }
-    </style>
-</head>
+          }
+          
+        /* Style the buttons that are used to open the tab content */
+          .tab button {
+            background-color: #180066;
+            color: white;
+            font-size: 2em;
+            float: center;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+          }
+          
+        /* Change background color of buttons on hover */
+          .tab button:hover {
+            background-color: #693bff;
+          }
+          
+        /* Create an active/current tablink class */
+          .tab button.active {
+            background-color: #693bff;
+          }
+        
+          .tabcontent {
+            color: #693bff;
+          }
 
-<body>
-    <div class="buttons">
-        <button type="button" class="collapsible"> Planet </button>
-        <div class="content">
+          h2 {
+            color: #693bff;
+            font-size: 1.7em;
+          }
+          h3 {
+            color: #693bff;
+            font-size:1.6em
+          }
+        
+          p {
+            color: #693bff;
+          }
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #180066;
+            color: white;
+            text-align: left;
+        }
+        </style>
+        </head>
+        
+        <body>
+        <!-- Tab links -->
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'Deity')">Deity</button>
+            <button class="tablinks" onclick="openCity(event, 'Planet')">Planet</button>
+            <button class="tablinks" onclick="openCity(event, 'Religion')">Religion</button>
+            <button class="tablinks" onclick="openCity(event, 'People')">People</button>
+            <button class="tablinks" onclick="openCity(event, 'Stories')">Stories</button>
+          
+          </div>
+          
+          <!-- Tab content -->
+          <div id="Deity" class="tabcontent">
+            <p>The Blue are actually two beings in one: Legend and Lore were born as conjoined twins, and when there was an attempt to divide them, the first black hole was created. They were quickly reconnected and the black hole faded, though there is still a scar in space. Children are taught the story of the Blue as part of history class in school.</p>
+            <p>The Blue is a creature of opposites and balance. Each twin takes after a parent- so one is of Light, and the other of Void. They use they/them pronouns when together (since they're plural in that case), but even when referring to only one side, they still use they/them pronouns despite the divided gender presentations. Legend is the light side and presents masculinely, and Lore is the void side and presents more femininely. Since the two spend all their time together, often even sharing minds, society's line between genders is nothing to them. They must remain conjoined, but can change their connection point depending on what activities they are doing. If they need use of their hands, for example, they may shift the connection point to their hip or knee so they can stand next to each other and work. For walking, it is usually as though they are holding hands. When sleeping, however, they cannot focus on maintaining a new connection point and therefore share a mind, as they were born. This means that they dream together and, when awake, can share thoughts intentionally so both can consider an issue at once. This mental connection is often chosen when there is something of great power/import that needs completed. </p>
+            <p>Obviously the two cannot be split, so they were given a planet to share. They couldn't decide on a singular intelligent species to populate it with, therefore multiple species are present thereon. (For gameplay purposes, this means that any living race may be chosen.)</p>
+            <p>There are two moons orbiting this planet- a singular pair of twins succeeded in reaching Yellow's realm and were therefore given moons of their own. As such, the tides move 4x a day, rather than 2x, and there is always a moon in the sky regardless of the time of day (you can only see both on rare occasions at the very lip of dawn or dusk)</p>
+            <p>Legend interacts directly most frequently with mortals, but Lore is more often influencing things to help people subtly.</p>
+            <p>Their perpetual connection and the calamity caused by any separation has even inspired a children’s game, where they try to do tasks without letting go of each other.</p>
+            <span onclick="this.parentElement.style.display='none'">[close]</span>
+          </div>
+          
+          <div id="Planet" class="tabcontent">
             <h2>Countries</h2>
             
             <h3>Aclus</h3>
@@ -110,76 +175,64 @@
                 <p>Sheffield: Ospya. He’s a bit of a druid, in a yeehaw, cowboy way.</p>
                 
                 <p>Brenard: Edrana. He’s a sweet talker and can integrate himself with the high-level nobles there.</p>
-                
 
-            <a href="blue_faq.html">FAQ</a>
-            <p>TO DO:images of all countries+ocean, family members+links to their dnd beyond </p>
-        </div>
-
-        <button type="button" class="collapsible"> Deity </button>
-        <div class="content">
-            <p>The Blue are actually two beings in one: Legend and Lore were born as conjoined twins, and when there was an attempt to divide them, the first black hole was created. They were quickly reconnected and the black hole faded, though there is still a scar in space. Children are taught the story of the Blue as part of history class in school.</p>
-            <p>The Blue is a creature of opposites and balance. Each twin takes after a parent- so one is of Light, and the other of Void. They use they/them pronouns when together (since they're plural in that case), but even when referring to only one side, they still use they/them pronouns despite the divided gender presentations. Legend is the light side and presents masculinely, and Lore is the void side and presents more femininely. Since the two spend all their time together, often even sharing minds, society's line between genders is nothing to them. They must remain conjoined, but can change their connection point depending on what activities they are doing. If they need use of their hands, for example, they may shift the connection point to their hip or knee so they can stand next to each other and work. For walking, it is usually as though they are holding hands. When sleeping, however, they cannot focus on maintaining a new connection point and therefore share a mind, as they were born. This means that they dream together and, when awake, can share thoughts intentionally so both can consider an issue at once. This mental connection is often chosen when there is something of great power/import that needs completed. </p>
-            <p>Obviously the two cannot be split, so they were given a planet to share. They couldn't decide on a singular intelligent species to populate it with, therefore multiple species are present thereon. (For gameplay purposes, this means that any living race may be chosen.)</p>
-            <p>There are two moons orbiting this planet- a singular pair of twins succeeded in reaching Yellow's realm and were therefore given moons of their own. As such, the tides move 4x a day, rather than 2x, and there is always a moon in the sky regardless of the time of day (you can only see both on rare occasions at the very lip of dawn or dusk)</p>
-            <p>Legend interacts directly most frequently with mortals, but Lore is more often influencing things to help people subtly.</p>
-            <p>Their perpetual connection and the calamity caused by any separation has even inspired a children’s game, where they try to do tasks without letting go of each other.</p>
-        </div>
-
-        <button type="button" class="collapsible"> Religion </button>
-        <div class="content">
+                <a href="blue_faq.html">FAQ</a>
+                <p>TO DO:images of all countries+ocean, family members+links to their dnd beyond </p>
+    
+            <span onclick="this.parentElement.style.display='none'">[close]</span>
+          </div>
+          
+          <div id="Religion" class="tabcontent">
             <p>The Blue is known world-wide as the creator of the planet, but worship varies from person to person. Some believe that the Blue influences every moment and decision made, whereas others consider Them to be distant, more overseers than influences. </p>
             <p>There are temples scattered all across the continents, especially concentrated around the Blue's trees, at least one of which is on every continent. These trees are considered to be the closest contact with deity on the planet, so pilgrimages are not uncommon for those who desire closeness with the Blue or have a difficult decision or request to make. The leaves are used as part of some religious practices, but only the higher-level priests are trained how to safely enter this communicative trance.</p>
-        </div>
-
-        <button type="button" class="collapsible"> People </button>
-        <div class="content">
+            <span onclick="this.parentElement.style.display='none'">[close]</span>
+          </div> 
+          
+          <div id="People" class="tabcontent">
             <h3>ACLUS</h3>
-                <p>Captain (Ilrion): Contrarsi (high-authority monk)</p>
-                <p>Commander Octavius Tanor: Contrarsi, commander of the city guard. Currently considered to be in a relationship with Wren. </p>
-                <p>Derek:Contrarsi (though he may appear in other spots). He/him, young Leonin, a bonkers lad who will run any message for a few copper. Equivalent to ~12.</p>
-                <p>(Family) Adair: Contrarsi . Adair runs the plans and coordinates things, handles all communications (only by written word to maintain the illusion of Dagik’s seniority, and she’s been doing this the whole time so there’s no variance in the handwriting), and is basically the entire structure of the Family.</p>
-                <p>(Family) Dagik: Contrarsi. Dagik is the one the world sees, a guy who is pretty intelligent and certainly cunning enough to get people to join him.</p>
-                <p>Father Canis:Contrarsi. he/him, half-elf priest of the Light and Void, likes to keep in close contact with his flock so he hears a lot about what is going on in the city. Equivalent of about ~60. Secretly a lycanthrope (werewolf), and has a system of potions to keep him calm during transformations and a backup cell hidden in the rectory. </p>
-                <p>Justin: Contrarsi, robot-seeming butler (A butler of unidentified origin in Lord Canary’s house who seems almost emotionless, able to tolerate Canary’s chatter for hours without reaction. Very efficient in his duties but not liable to gossip.Equivalent to ~40)</p>
-                <p>Kreilla Preste: Contrarsi. They/them, halfling kitchen servant in the Governor’s household. Equivalent of ~25. </p>
-                <p>Lord Canary: Contrarsi, absurdly excitable guy. Enjoys going to parties and rubbing shoulders with other high-level folks, but talks too much (and too loudly) for any of them to really like him. Has hired Dinui a few times, though she only recalls the most recent. (The others at the temple gave her a basic rundown of the other times.) </p>
-                <p>Professor Umbra: Karsein (suburb of Contrarsi). He/they, a gray tabaxi professor who teaches arcane theory. Equivalent to ~45</p>
+            <p>Captain (Ilrion): Contrarsi (high-authority monk)</p>
+            <p>Commander Octavius Tanor: Contrarsi, commander of the city guard. Currently considered to be in a relationship with Wren. </p>
+            <p>Derek:Contrarsi (though he may appear in other spots). He/him, young Leonin, a bonkers lad who will run any message for a few copper. Equivalent to ~12.</p>
+            <p>(Family) Adair: Contrarsi . Adair runs the plans and coordinates things, handles all communications (only by written word to maintain the illusion of Dagik’s seniority, and she’s been doing this the whole time so there’s no variance in the handwriting), and is basically the entire structure of the Family.</p>
+            <p>(Family) Dagik: Contrarsi. Dagik is the one the world sees, a guy who is pretty intelligent and certainly cunning enough to get people to join him.</p>
+            <p>Father Canis:Contrarsi. he/him, half-elf priest of the Light and Void, likes to keep in close contact with his flock so he hears a lot about what is going on in the city. Equivalent of about ~60. Secretly a lycanthrope (werewolf), and has a system of potions to keep him calm during transformations and a backup cell hidden in the rectory. </p>
+            <p>Justin: Contrarsi, robot-seeming butler (A butler of unidentified origin in Lord Canary’s house who seems almost emotionless, able to tolerate Canary’s chatter for hours without reaction. Very efficient in his duties but not liable to gossip.Equivalent to ~40)</p>
+            <p>Kreilla Preste: Contrarsi. They/them, halfling kitchen servant in the Governor’s household. Equivalent of ~25. </p>
+            <p>Lord Canary: Contrarsi, absurdly excitable guy. Enjoys going to parties and rubbing shoulders with other high-level folks, but talks too much (and too loudly) for any of them to really like him. Has hired Dinui a few times, though she only recalls the most recent. (The others at the temple gave her a basic rundown of the other times.) </p>
+            <p>Professor Umbra: Karsein (suburb of Contrarsi). He/they, a gray tabaxi professor who teaches arcane theory. Equivalent to ~45</p>
 
-            <h3>DUSKAD</h3>
-                <p>Clarence: Trouveh, informant (no one expects the disabled guy [missing arms and legs] to be paying attention so he sees everything. Sometimes informs the Family, if paid well enough.) </p>
-                <p>Emiline: Trouveh, bookshop owner. </p>
-                <p>(Family) Jeshua: Trouveh. Main Uncle in Duskad. He was adopted as a baby- he’s young to be an Uncle (23), but he proved himself as a Cousin and was assigned the responsibility by Dagik. </p>
-                <p>Nigel: Anywhere, priest of the Blue (quiet but always working on something for the temple, be it building benches or cleaning or whatever, just constantly shifting like a shadow.) </p>
+        <h3>DUSKAD</h3>
+            <p>Clarence: Trouveh, informant (no one expects the disabled guy [missing arms and legs] to be paying attention so he sees everything. Sometimes informs the Family, if paid well enough.) </p>
+            <p>Emiline: Trouveh, bookshop owner. </p>
+            <p>(Family) Jeshua: Trouveh. Main Uncle in Duskad. He was adopted as a baby- he’s young to be an Uncle (23), but he proved himself as a Cousin and was assigned the responsibility by Dagik. </p>
+            <p>Nigel: Anywhere, priest of the Blue (quiet but always working on something for the temple, be it building benches or cleaning or whatever, just constantly shifting like a shadow.) </p>
 
-            <h3>EDRANA</h3>
-                <p>Clarena: deep forests of Edrana, cleric of Indigo (not very powerful unfortunately due to this) who works with the fiber arts. Knows things. </p>
-                <p>(Family) Brenard: Verloren. The main Uncle in Edrana, and was assigned there because he’s a sweet talker and can integrate himself with the high-level nobles there.</p>
-                <p>Father Jethro: Halfling, keeper of the Sanctum of Cristallin in Porrenus, adopted father of Miriam.</p>
-                <p>Grandma: Bottleneck. Wellie’s Grandmother who lives with him, a dwarf who was once a professional blacksmith (still uses a hammer as her cane). Makes fantastic stew. </p>
-                <p>Green: Brittleglen [forest community], “they just call me Green.” Hunter/trapper (has met Clarena, could direct them there if needed) </p>
-                <p>Gregory: Bottleneck area (has a farm about a half-hour’s ride from the town). Sells his goods at the market in Felva (where the orchestra played) and once gave Wellie, Lavinia, and Evan a ride back to Bottleneck. (he regretted offering within an hour)</p>
-                <p>Hannah: Verloren, cheerful child playing in the street with friends </p>
-                <p>High Cleric: Cleric of Dinui’s temple, They are a magma dragonborn and as such do not leave the temple often, as they are the only one on the planet and get a lot of attention anytime they are seen.</p>
-                <p>Miryam: Porrenus [halfling village, about 2 hours from the Duskad border], religious. Adopted daughter of Father Jethro.</p>
+        <h3>EDRANA</h3>
+            <p>Clarena: deep forests of Edrana, cleric of Indigo (not very powerful unfortunately due to this) who works with the fiber arts. Knows things. </p>
+            <p>(Family) Brenard: Verloren. The main Uncle in Edrana, and was assigned there because he’s a sweet talker and can integrate himself with the high-level nobles there.</p>
+            <p>Father Jethro: Halfling, keeper of the Sanctum of Cristallin in Porrenus, adopted father of Miriam.</p>
+            <p>Grandma: Bottleneck. Wellie’s Grandmother who lives with him, a dwarf who was once a professional blacksmith (still uses a hammer as her cane). Makes fantastic stew. </p>
+            <p>Green: Brittleglen [forest community], “they just call me Green.” Hunter/trapper (has met Clarena, could direct them there if needed) </p>
+            <p>Gregory: Bottleneck area (has a farm about a half-hour’s ride from the town). Sells his goods at the market in Felva (where the orchestra played) and once gave Wellie, Lavinia, and Evan a ride back to Bottleneck. (he regretted offering within an hour)</p>
+            <p>Hannah: Verloren, cheerful child playing in the street with friends </p>
+            <p>High Cleric: Cleric of Dinui’s temple, They are a magma dragonborn and as such do not leave the temple often, as they are the only one on the planet and get a lot of attention anytime they are seen.</p>
+            <p>Miryam: Porrenus [halfling village, about 2 hours from the Duskad border], religious. Adopted daughter of Father Jethro.</p>
 
-            <h3>OSPYA</h3>
-                <p>Aspen: Gabesh, druidish citizen (petals)</p>
-                <p>(Family) Sheffield: Gabesh. The main Uncle in Ospya, and was assigned there because he’s a bit of a druid himself (in a yeehaw, cowboy way).</p>
-                <p>Mbah Kabeya: Loxodon leader of the country. His skin is wrinkled and creases deeply when he smiles, as though he has done so an uncountable number of times. His eyes are glassy black and unseeing, but if you look closely you can see stars in them. It almost looks like a reflection from the open ceiling, but they do not shift like they should. If sufficient attention is paid, people can know that he sees through the stars. His tusks are inlaid with silver, the patterns of the fine filaments halfway between the veins of a leaf and the strands of a spiderweb.</p>
-                <p>Oliver: [forest city], lycanthrope in a community of werepeople</p>
+        <h3>OSPYA</h3>
+            <p>Aspen: Gabesh, druidish citizen (petals)</p>
+            <p>(Family) Sheffield: Gabesh. The main Uncle in Ospya, and was assigned there because he’s a bit of a druid himself (in a yeehaw, cowboy way).</p>
+            <p>Mbah Kabeya: Loxodon leader of the country. His skin is wrinkled and creases deeply when he smiles, as though he has done so an uncountable number of times. His eyes are glassy black and unseeing, but if you look closely you can see stars in them. It almost looks like a reflection from the open ceiling, but they do not shift like they should. If sufficient attention is paid, people can know that he sees through the stars. His tusks are inlaid with silver, the patterns of the fine filaments halfway between the veins of a leaf and the strands of a spiderweb.</p>
+            <p>Oliver: [forest city], lycanthrope in a community of werepeople</p>
 
-            <h3>OTHER</h3>
-                <p>(Family) Gillebrìde: Palna. Rogue. She’s a frost dragonborn that started at Home but the warm temperatures were so detrimental to her health that she needed to be elsewhere. Adair saw this as the perfect opportunity to fill the void in their operations, and sent Gillebrìde with another member to watch over Palna. There is a rotating cycle of members that help Gillebrìde, but none of them do well with the environment so they cycle through, with one per season.</p>
-                <p>Verelen: ocean merfolk</p>
+        <h3>OTHER</h3>
+            <p>(Family) Gillebrìde: Palna. Rogue. She’s a frost dragonborn that started at Home but the warm temperatures were so detrimental to her health that she needed to be elsewhere. Adair saw this as the perfect opportunity to fill the void in their operations, and sent Gillebrìde with another member to watch over Palna. There is a rotating cycle of members that help Gillebrìde, but none of them do well with the environment so they cycle through, with one per season.</p>
+            <p>Verelen: ocean merfolk</p>
 
-            <h3>TO DO: add images, link to stories/info when needed.</h3>
-        </div>
-
-        <button type="button" class="collapsible"> Stories </button>
-        <div class="content">
-            <h2>World Stories</h2>
-            
+        <h3>TO DO: add images, link to stories/info when needed.</h3>
+            <span onclick="this.parentElement.style.display='none'">[close]</span>
+          </div> 
+          
+          <div id="Stories" class="tabcontent">
             <h3>Family Tree </h3>
             <p>Every member of the government knows of the Family. There are specific lessons and pamphlets created for new hires, teaching them about the importance–and danger– of this group of people. They have representatives on every continent, in every country, and every city worth notice. Yet despite the widespread knowledge of them and their huge influence, no government in decades has tried to shut down this criminal organisation. Why? Here is the same answer given to every person who asks that very same question upon first learning about them.</p>
             <p>The Family, as they exist now, has been in place for almost two centuries. Before that, however, they began as a literal family. After being chased from their home for their demon blood, this family of tieflings fell to a life of crime in order to survive. They began smuggling, scraping every penny they could in hopes of providing for themselves again. As they spent more and more time in criminal circles, however, they saw how sharp and biting a life on the streets was for each person. They wondered if, perhaps, there might be a better way. They knew crime could never be eradicated- too many years of governmental failures had proved that- but if it could be organised, there might be a way to provide for such a need while avoiding the suffering of such a lonely life.</p>
@@ -310,27 +363,34 @@
             <p>When the Elections were coming around, Mbah Kabeya would never have thought to join the list of possibilities. It wasn’t until three separate people, completely unprompted, mentioned that they thought he would be a good governmental figure that he even considered it as a possibility. He was not ready for that election, but five years later when it was time to elect again, he was ready to begin his campaign. He didn’t do much (wanting his merits to shine rather than any showboating), but nevertheless won in a landslide vote. He has now been the democratic leader of Ospya for 4 years (he would never think it, but an omniscient being [me] knows that he’s definitely being voted in for a second term) and has done good work for the country, helped on by his many experiences and great research.</p>
 
                 <h3>TO DO: Add Links, Images</h3>
+            <span onclick="this.parentElement.style.display='none'">[close]</span>
+          </div> 
 
-        </div>
-    </div>
-<a href="#">Home</a>
-
-
-<script>
-var coll = document.getElementsByClassName("collapsible");
-    var i;
-    for (i = 0; i < coll.length; i++) {
-      coll[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.display === "block") {
-          content.style.display = "none";
-        } else {
-          content.style.display = "block";
-        }
-      });
-    }
-</script>
-
+          
+          <script>
+          function openCity(evt, cityName) {
+              // Declare all variables
+              var i, tabcontent, tablinks;
+            
+              // Get all elements with class="tabcontent" and hide them
+              tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+            
+              // Get all elements with class="tablinks" and remove the class "active"
+              tablinks = document.getElementsByClassName("tablinks");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+            
+              // Show the current tab, and add an "active" class to the button that opened the tab
+              document.getElementById(cityName).style.display = "block";
+              evt.currentTarget.className += " active";
+            } 
+          </script> 
+<footer>
+    <a href="https://thebluewraith.github.io/wdd130/legend&lore/index.html">Home</a>
+</footer>
 </body>
 </html>

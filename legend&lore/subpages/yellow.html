@@ -4,66 +4,125 @@
     <meta charset="UTF-8">
     <title>Legend&Lore:Yellow</title>
     <link type="text/css" rel="stylesheet" href="..\styles\planets.css">
-    
     <style>
         body {
             background-image: url("../images/galaxy_yellow.png");
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
+             background-repeat: no-repeat;
+             background-attachment: fixed;
+             background-size: cover;
         }
-        .collapsible {
+        /* Style the tab */
+         .tab {
+            overflow: hidden;
+            border: 1px solid #efe231;
             background-color: #efe231;
+          }
+          
+        /* Style the buttons that are used to open the tab content */
+          .tab button {
+            background-color: #efe231;
+            color: white;
+            font-size: 2em;
+            float: center;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+          }
+          
+        /* Change background color of buttons on hover */
+          .tab button:hover {
+            background-color: #f9f6cb;
+          }
+          
+        /* Create an active/current tablink class */
+          .tab button.active {
+            background-color: #f9f6cb;
+          }
+        
+          .tabcontent {
+            color: #f9f6cb;
+          }
+        
+          p {
+            color: #f9f6cb;
+          }
+          footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #efe231;
+            color: white;
+            text-align: left;
         }
-        .active, .collapsible:hover {
-        background-color: #f9f6cb;
-        color:#efe231;
-        }
-    </style>
-</head>
-
-<body>
-    <div class="buttons">
-        <button type="button" class="collapsible"> Planet </button>
-        <div class="content">
+        </style>
+        </head>
+        
+        <body>
+        <!-- Tab links -->
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'Deity')">Deity</button>
+            <button class="tablinks" onclick="openCity(event, 'Planet')">Planet</button>
+            <button class="tablinks" onclick="openCity(event, 'Religion')">Religion</button>
+            <button class="tablinks" onclick="openCity(event, 'People')">People</button>
+            <button class="tablinks" onclick="openCity(event, 'Stories')">Stories</button>
+          
+          </div>
+          
+          <!-- Tab content -->
+          <div id="Deity" class="tabcontent">
+            <p>they/them, eldest</p>
+            <span onclick="this.parentElement.style.display='none'">[close]</span>
+          </div>
+          
+          <div id="Planet" class="tabcontent">
             <p>Yellow's domain is less of a real 'planet' and is more of a demiplane- still physically connected to the realism overseen by the rest of the Chromastan, but mostly serves as a meeting space for the deities when they need it. This does not occur often, however, as the sudden disappearance of divine power from the planets tends to end in crisis. If a mortal manages to get there without being lost (physically or mentally) they become a demigod due to their proximity to the Penumbra and are offered a moon to guard and influence a planet with. If they turn this down, they are offered knowledge (though they must ask the questions to receive answers, Yellow does not choose what information to offer.)</p>
             <p> Yellow’s plane does not have physical mass as such, only existing as much as Yellow wills it. They can form it in whatever shape pleases them, changing to fit their mood or intent with naught but a thought. Oftentimes when they have visitors, Yellow will adjust the visual representation of their plane to fit either the person’s expectation or their homeworld, depending on how they wish the interaction to proceed. </p>
             <p>This shining plane also serves as a barrier between the volatile elemental planes and the mortals on the other side, as well as housing the Penumbra (intersection of Light and Void), the source of deific Chromatic power.</p>   
-        </div>
-        <button type="button" class="collapsible"> Deity </button>
-        <div class="content">
-            <p>they/them, eldest</p>
-        </div>
-        <button type="button" class="collapsible"> Religion </button>
-        <div class="content">
-            <p>text here</p>
-        </div>
-        <button type="button" class="collapsible"> People </button>
-        <div class="content">
-            <p>text here</p>
-        </div>
-        <button type="button" class="collapsible"> Stories </button>
-        <div class="content">
-            <p>text here</p>
-        </div>
-    </div>
-<a href="index.html">Home</a>
-
-<script>
-var coll = document.getElementsByClassName("collapsible");
-    var i;
-    for (i = 0; i < coll.length; i++) {
-      coll[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.display === "block") {
-          content.style.display = "none";
-        } else {
-          content.style.display = "block";
-        }
-      });
-    }
-</script>
-
+            <span onclick="this.parentElement.style.display='none'">[close]</span>
+          </div>
+          
+          <div id="Religion" class="tabcontent">
+            <p>Tokyo is the capital of Japan.</p>
+            <span onclick="this.parentElement.style.display='none'">[close]</span>
+          </div> 
+          
+          <div id="People" class="tabcontent">
+            <p>Tokyo is the capital of Japan.</p>
+            <span onclick="this.parentElement.style.display='none'">[close]</span>
+          </div> 
+          
+          <div id="Stories" class="tabcontent">
+            <p>Tokyo is the capital of Japan.</p>
+            <span onclick="this.parentElement.style.display='none'">[close]</span>
+          </div> 
+          
+          <script>
+          function openCity(evt, cityName) {
+              // Declare all variables
+              var i, tabcontent, tablinks;
+            
+              // Get all elements with class="tabcontent" and hide them
+              tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+            
+              // Get all elements with class="tablinks" and remove the class "active"
+              tablinks = document.getElementsByClassName("tablinks");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+            
+              // Show the current tab, and add an "active" class to the button that opened the tab
+              document.getElementById(cityName).style.display = "block";
+              evt.currentTarget.className += " active";
+            } 
+          </script>    
+<footer>
+    <a href="https://thebluewraith.github.io/wdd130/legend&lore/index.html">Home</a>
+</footer>
 </body>
 </html>

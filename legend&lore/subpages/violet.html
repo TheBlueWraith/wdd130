@@ -4,65 +4,125 @@
     <meta charset="UTF-8">
     <title>Legend&Lore:Violet</title>
     <link type="text/css" rel="stylesheet" href="..\styles\planets.css">
-    
     <style>
         body {
             background-image: url("../images/galaxy_violet.png");
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
+             background-repeat: no-repeat;
+             background-attachment: fixed;
+             background-size: cover;
         }
-        .collapsible {
+        /* Style the tab */
+         .tab {
+            overflow: hidden;
+            border: 1px solid #52115e;
             background-color: #52115e;
+          }
+          
+        /* Style the buttons that are used to open the tab content */
+          .tab button {
+            background-color: #52115e;
+            color: white;
+            font-size: 2em;
+            float: center;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+          }
+          
+        /* Change background color of buttons on hover */
+          .tab button:hover {
+            background-color: #f5bbff;
+          }
+          
+        /* Create an active/current tablink class */
+          .tab button.active {
+            background-color: #f5bbff;
+          }
+        
+          .tabcontent {
+            color: #f5bbff;
+          }
+        
+          p {
+            color: #f5bbff;
+          }
+        
+          footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #52115e;
+            color: white;
+            text-align: left;
         }
-        .active, .collapsible:hover {
-        background-color: #f5bbff;
-        color:#52115e;
-        }
-    </style>
-</head>
-
-<body>
-    <div class="buttons">
-        <button type="button" class="collapsible"> Planet </button>
-        <div class="content">
-            <p>Violet created her planet within the embrace of Void, unconcerned by the distance from Light. With such preference, her few creations are themselves half void, spectral upon her lightless planet. As she watched her siblings guard their worlds, however, she wished that she had created something of greater interest. When they all began to wonder what to do with the souls of the lost, she saw her opportunity. She offered her planet as an afterlife, promising that her own creations would guard the spirits until they faded naturally and happily. She and her Seraphim have done so since, watching over these small specks of spiritual light on her planet as they slowly learn to rest amongst the stars. </p>      
-        </div>
-        <button type="button" class="collapsible"> Deity </button>
-        <div class="content">
+        </style>
+        </head>
+        
+        <body>
+        <!-- Tab links -->
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'Deity')">Deity</button>
+            <button class="tablinks" onclick="openCity(event, 'Planet')">Planet</button>
+            <button class="tablinks" onclick="openCity(event, 'Religion')">Religion</button>
+            <button class="tablinks" onclick="openCity(event, 'People')">People</button>
+            <button class="tablinks" onclick="openCity(event, 'Stories')">Stories</button>
+          
+          </div>
+          
+          <!-- Tab content -->
+          <div id="Deity" class="tabcontent">
             <p>she/her, 5th born</p>
-            <p>She's happy- being further from Light means that she is closer to Void, and she has always been a ‘Daddy's girl’.</p>
-        </div>
-        <button type="button" class="collapsible"> Religion </button>
-        <div class="content">
-            <p>text here</p>
-        </div>
-        <button type="button" class="collapsible"> People </button>
-        <div class="content">
-            <p>text here</p>
-        </div>
-        <button type="button" class="collapsible"> Stories </button>
-        <div class="content">
-            <p>text here</p>
-        </div>
-    </div>
-<a href="index.html">Home</a>
-
-<script>
-var coll = document.getElementsByClassName("collapsible");
-    var i;
-    for (i = 0; i < coll.length; i++) {
-      coll[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.display === "block") {
-          content.style.display = "none";
-        } else {
-          content.style.display = "block";
-        }
-      });
-    }
-</script>
-
+            <p>She's happy- being further from Light means that she is closer to Void, and she has always been a ‘Daddy's girl’.</p>            
+            <span onclick="this.parentElement.style.display='none'">[close]</span>
+          </div>
+          
+          <div id="Planet" class="tabcontent">
+            <p>Violet created her planet within the embrace of Void, unconcerned by the distance from Light. With such preference, her few creations are themselves half void, spectral upon her lightless planet. As she watched her siblings guard their worlds, however, she wished that she had created something of greater interest. When they all began to wonder what to do with the souls of the lost, she saw her opportunity. She offered her planet as an afterlife, promising that her own creations would guard the spirits until they faded naturally and happily. She and her Seraphim have done so since, watching over these small specks of spiritual light on her planet as they slowly learn to rest amongst the stars. </p>      
+            <span onclick="this.parentElement.style.display='none'">[close]</span>
+          </div>
+          
+          <div id="Religion" class="tabcontent">
+            <p>Tokyo is the capital of Japan.</p>
+            <span onclick="this.parentElement.style.display='none'">[close]</span>
+          </div> 
+          
+          <div id="People" class="tabcontent">
+            <p>Tokyo is the capital of Japan.</p>
+            <span onclick="this.parentElement.style.display='none'">[close]</span>
+          </div> 
+          
+          <div id="Stories" class="tabcontent">
+            <p>Tokyo is the capital of Japan.</p>
+            <span onclick="this.parentElement.style.display='none'">[close]</span>
+          </div> 
+          
+          <script>
+          function openCity(evt, cityName) {
+              // Declare all variables
+              var i, tabcontent, tablinks;
+            
+              // Get all elements with class="tabcontent" and hide them
+              tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+            
+              // Get all elements with class="tablinks" and remove the class "active"
+              tablinks = document.getElementsByClassName("tablinks");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+            
+              // Show the current tab, and add an "active" class to the button that opened the tab
+              document.getElementById(cityName).style.display = "block";
+              evt.currentTarget.className += " active";
+            } 
+          </script> 
 </body>
+<footer>
+    <a href="https://thebluewraith.github.io/wdd130/legend&lore/index.html">Home</a>
+</footer>
 </html>

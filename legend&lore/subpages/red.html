@@ -4,66 +4,125 @@
     <meta charset="UTF-8">
     <title>Legend&Lore:Red</title>
     <link type="text/css" rel="stylesheet" href="..\styles\planets.css">
+<style>
+body {
+    background-image: url("../images/galaxy_red.png");
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-size: cover;
+}
+/* Style the tab */
+ .tab {
+    overflow: hidden;
+    border: 1px solid #bc242d;
+    background-color: #bc241d;
+  }
+  
+/* Style the buttons that are used to open the tab content */
+  .tab button {
+    background-color: #bc242d;
+    color: white;
+    font-size: 2em;
+    float: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+  }
+  
+/* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #f89d98;
+  }
+  
+/* Create an active/current tablink class */
+  .tab button.active {
+    background-color: #f89d98;
+  }
 
-    <style>
-        body {
-            background-image: url("../images/galaxy_red.png");
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-        }
-        .collapsible {
-            background-color: #bc241d;
-        }
-        .active, .collapsible:hover {
-        background-color: #f89d98;
-        color:#bc241d;
-        }
-    </style>
+  .tabcontent {
+    color: #f89d98;
+  }
+
+  p {
+    color: #f89d98;
+  }
+  footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #bc242d;
+        color: white;
+        text-align: left;
+     }
+</style>
 </head>
 
 <body>
-    <div class="buttons">
-        <button type="button" class="collapsible" id="a"> Planet </button>
-        <div class="content">
-            <p>Red holds the dual elemental planes of air and earth. The split between them mixes in some small places, but the conflicting magical essences keeps the divide distinct along most of the circumference. Due to the gyroscoping nature of Red and Orange, there is some trade of influence, allowing heat and some slight moisture to join Red’s ecology. Inhabitants of the planet are therefore not limited to solely pure earth and air elementals, but also include elementals such as storm (air/water), lava(earth/fire), ooze(earth/water), and smoke(air/fire). Elementals do not die like mortals, instead cycling through forms and holding a ‘generational’ memory. Elementals almost always continue as their original element, but some incorporate pieces of others as part of a new form, becoming para-elementals for their next period of existence. They cannot totally lose their original makeup, however, and will therefore always be at least half formed of their base element. </p>
-            <p> The ‘landmasses’ of the elemental planes are constantly shifting, changing to fit the whims of the most powerful among the elementals. Any map drawn would be useless in days, even hours. </p>
-            <p>The shared and reflected magic of the four elemental planes is extremely powerful, so Yellow placed their plane between the elemental planets and those populated with mortals. Mortals who successfully visit Yellow’s plane can choose to behold the power of the elemental planes, but become inexorably changed by the process. If they choose to return to their original planet, any children they have will be touched by the element that influenced the parent most. (These children are Genasi.)</p>
-        </div>
-        <button type="button" class="collapsible" id="b"> Deity </button>
-        <div class="content">
-            <p>She/her, Orange's twin, 3rd born</p>
-        </div>
-        <button type="button" class="collapsible" id="c"> Religion </button>
-        <div class="content">
-            <p>text here</p>
-        </div>
-        <button type="button" class="collapsible" id="d"> People </button>
-        <div class="content">
-            <p>text here</p>
-        </div>
-        <button type="button" class="collapsible" id="e"> Stories </button>
-        <div class="content">
-            <p>text here</p>
-        </div>
-    </div>
-<a href="index.html" id="home_link">Home</a>
-
-<script>
-var coll = document.getElementsByClassName("collapsible");
-    var i;
-    for (i = 0; i < coll.length; i++) {
-      coll[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.display === "block") {
-          content.style.display = "none";
-        } else {
-          content.style.display = "block";
-        }
-      });
-    }
-</script>
-
+<!-- Tab links -->
+<div class="tab">
+    <button class="tablinks" onclick="openCity(event, 'Deity')">Deity</button>
+    <button class="tablinks" onclick="openCity(event, 'Planet')">Planet</button>
+    <button class="tablinks" onclick="openCity(event, 'Religion')">Religion</button>
+    <button class="tablinks" onclick="openCity(event, 'People')">People</button>
+    <button class="tablinks" onclick="openCity(event, 'Stories')">Stories</button>
+  
+  </div>
+  
+  <!-- Tab content -->
+  <div id="Deity" class="tabcontent">
+    <p>She/her, Orange's twin, 3rd born</p>
+    <span onclick="this.parentElement.style.display='none'">[close]</span>
+  </div>
+  
+  <div id="Planet" class="tabcontent">
+    <p>Red holds the dual elemental planes of air and earth. The split between them mixes in some small places, but the conflicting magical essences keeps the divide distinct along most of the circumference. Due to the gyroscoping nature of Red and Orange, there is some trade of influence, allowing heat and some slight moisture to join Red’s ecology. Inhabitants of the planet are therefore not limited to solely pure earth and air elementals, but also include elementals such as storm (air/water), lava(earth/fire), ooze(earth/water), and smoke(air/fire). Elementals do not die like mortals, instead cycling through forms and holding a ‘generational’ memory. Elementals almost always continue as their original element, but some incorporate pieces of others as part of a new form, becoming para-elementals for their next period of existence. They cannot totally lose their original makeup, however, and will therefore always be at least half formed of their base element. </p>
+    <p> The ‘landmasses’ of the elemental planes are constantly shifting, changing to fit the whims of the most powerful among the elementals. Any map drawn would be useless in days, even hours. </p>
+    <p>The shared and reflected magic of the four elemental planes is extremely powerful, so Yellow placed their plane between the elemental planets and those populated with mortals. Mortals who successfully visit Yellow’s plane can choose to behold the power of the elemental planes, but become inexorably changed by the process. If they choose to return to their original planet, any children they have will be touched by the element that influenced the parent most. (These children are Genasi.)</p>
+    <span onclick="this.parentElement.style.display='none'">[close]</span>
+  </div>
+  
+  <div id="Religion" class="tabcontent">
+    <p>Tokyo is the capital of Japan.</p>
+    <span onclick="this.parentElement.style.display='none'">[close]</span>
+  </div> 
+  
+  <div id="People" class="tabcontent">
+    <p>Tokyo is the capital of Japan.</p>
+    <span onclick="this.parentElement.style.display='none'">[close]</span>
+  </div> 
+  
+  <div id="Stories" class="tabcontent">
+    <p>Tokyo is the capital of Japan.</p>
+    <span onclick="this.parentElement.style.display='none'">[close]</span>
+  </div> 
+  
+  <script>
+  function openCity(evt, cityName) {
+      // Declare all variables
+      var i, tabcontent, tablinks;
+    
+      // Get all elements with class="tabcontent" and hide them
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+    
+      // Get all elements with class="tablinks" and remove the class "active"
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+    
+      // Show the current tab, and add an "active" class to the button that opened the tab
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    } 
+  </script>
+<footer>
+    <a href="https://thebluewraith.github.io/wdd130/legend&lore/index.html">Home</a>
+</footer>
 </body>
 </html>

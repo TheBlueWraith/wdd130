@@ -4,65 +4,124 @@
     <meta charset="UTF-8">
     <title>Legend&Lore:Green</title>
     <link type="text/css" rel="stylesheet" href="..\styles\planets.css">
-    
     <style>
         body {
             background-image: url("../images/galaxy_green.png");
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
+             background-repeat: no-repeat;
+             background-attachment: fixed;
+             background-size: cover;
         }
-        .collapsible {
+        /* Style the tab */
+         .tab {
+            overflow: hidden;
+            border: 1px solid #288d1a;
             background-color: #288d1a;
+          }
+          
+        /* Style the buttons that are used to open the tab content */
+          .tab button {
+            background-color: #288d1a;
+            color: white;
+            font-size: 2em;
+            float: center;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+          }
+          
+        /* Change background color of buttons on hover */
+          .tab button:hover {
+            background-color: #d5f9d0;
+          }
+          
+        /* Create an active/current tablink class */
+          .tab button.active {
+            background-color: #d5f9d0;
+          }
+        
+          .tabcontent {
+            color: #d5f9d0;
+          }
+        
+          p {
+            color: #d5f9d0;
+          }
+          footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #288d1a;
+            color: white;
+            text-align: left;
         }
-        .active, .collapsible:hover {
-        background-color: #d5f9d0;
-        color:#288d1a;
-        }
-    </style>
-</head>
-
-<body>
-    <div class="buttons">
-        <button type="button" class="collapsible"> Planet </button>
-        <div class="content">
+        </style>
+        </head>
+        
+        <body>
+        <!-- Tab links -->
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'Deity')">Deity</button>
+            <button class="tablinks" onclick="openCity(event, 'Planet')">Planet</button>
+            <button class="tablinks" onclick="openCity(event, 'Religion')">Religion</button>
+            <button class="tablinks" onclick="openCity(event, 'People')">People</button>
+            <button class="tablinks" onclick="openCity(event, 'Stories')">Stories</button>
+          
+          </div>
+          
+          <!-- Tab content -->
+          <div id="Deity" class="tabcontent">
+            <p>ze/zir, 4th born</p>
+            <span onclick="this.parentElement.style.display='none'">[close]</span>
+          </div>
+          
+          <div id="Planet" class="tabcontent">
             <p>Green's planet is this universe’s equivalent of the Feywild- it is a mirror of the material plane that sits between it and extreme sources of power (such as the elemental planets and the Penumbra), and as such, things there are similar to the planet of the Blue, but stronger and stranger. Green created the first humanoids, new and strange in their consciousness. Fae beings populate this planet, walking the line between human and creature. The world they live upon holds but one continent, wrapping around about a third of the planet. The waters are dangerous, their deepest depths holding cryptic beings incomprehensible to mortal minds.</p>
             <p>Three groups dominate this world- the two Fae Courts and the Révoliers. The Fae Courts are powerful and attract individuals both rich and sycophantic. They currently battle over having the most influence upon the planet and its people, constantly having spats and squabbles over seemingly petty things. Under each petty argument, however, is a push for land, people,  and influence barely masked by the nobles’ catfights. The Révoliers are a group created in opposition to the absurdity of the Courts. They profess to be logical and down-to-earth, but even the most fanciful resident of the Blue would think them excessively florid. The Révoliers gather members from those shunned by the Courts, slowly amassing power as they formulate plans to take down the Courts entirely.</p>
-        </div>
-        <button type="button" class="collapsible"> Deity </button>
-        <div class="content">
-            <p>ze/zir, 4th born</p>
-        </div>
-        <button type="button" class="collapsible"> Religion </button>
-        <div class="content">
-            <p>text here</p>
-        </div>
-        <button type="button" class="collapsible"> People </button>
-        <div class="content">
-            <p>text here</p>
-        </div>
-        <button type="button" class="collapsible"> Stories </button>
-        <div class="content">
-            <p>text here</p>
-        </div>
-    </div>
-<a href="index.html">Home</a>
-
-<script>
-var coll = document.getElementsByClassName("collapsible");
-    var i;
-    for (i = 0; i < coll.length; i++) {
-      coll[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.display === "block") {
-          content.style.display = "none";
-        } else {
-          content.style.display = "block";
-        }
-      });
-    }
-</script>
-
+            <span onclick="this.parentElement.style.display='none'">[close]</span>
+          </div>
+          
+          <div id="Religion" class="tabcontent">
+            <p>Tokyo is the capital of Japan.</p>
+            <span onclick="this.parentElement.style.display='none'">[close]</span>
+          </div> 
+          
+          <div id="People" class="tabcontent">
+            <p>Tokyo is the capital of Japan.</p>
+            <span onclick="this.parentElement.style.display='none'">[close]</span>
+          </div> 
+          
+          <div id="Stories" class="tabcontent">
+            <p>Tokyo is the capital of Japan.</p>
+            <span onclick="this.parentElement.style.display='none'">[close]</span>
+          </div> 
+          
+          <script>
+          function openCity(evt, cityName) {
+              // Declare all variables
+              var i, tabcontent, tablinks;
+            
+              // Get all elements with class="tabcontent" and hide them
+              tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+            
+              // Get all elements with class="tablinks" and remove the class "active"
+              tablinks = document.getElementsByClassName("tablinks");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+            
+              // Show the current tab, and add an "active" class to the button that opened the tab
+              document.getElementById(cityName).style.display = "block";
+              evt.currentTarget.className += " active";
+            } 
+          </script> 
+<footer>
+    <a href="https://thebluewraith.github.io/wdd130/legend&lore/index.html">Home</a>
+</footer>
 </body>
 </html>
